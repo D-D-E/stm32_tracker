@@ -30,6 +30,13 @@
 
 void SystemClock_Config(void);
 
+typedef struct usb_report {
+	uint8_t x;
+	uint8_t y;
+	uint8_t z;
+	uint8_t buttons; // only 2 bits
+} USB_REPORT;
+
 int main(void)
 {
 	HAL_Init();
@@ -41,6 +48,8 @@ int main(void)
 	MX_USB_DEVICE_Init();
 
 	MPU6050_Init(&hi2c1);
+
+	USB_REPORT report = {0};
 
 	while (1)
 	{
