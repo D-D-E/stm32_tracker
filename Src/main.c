@@ -25,6 +25,8 @@
 #include "usb_device.h"
 #include "gpio.h"
 
+#include "mpu6050.h"
+
 
 void SystemClock_Config(void);
 
@@ -37,6 +39,8 @@ int main(void)
 	MX_I2C1_Init();
 	// MX_USART1_UART_Init(); while nahui
 	MX_USB_DEVICE_Init();
+
+	MPU6050_Init(&hi2c1);
 
 	while (1)
 	{

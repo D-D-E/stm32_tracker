@@ -1,0 +1,2 @@
+usb_device.c:29:6:MX_USB_Send_Report	0	static
+usb_device.c:34:6:MX_USB_DEVICE_Init	8	static
