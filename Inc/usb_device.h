@@ -17,9 +17,7 @@
   *
   ******************************************************************************
   */
-/* USER CODE END Header */
 
-/* Define to prevent recursive inclusion -------------------------------------*/
 #ifndef __USB_DEVICE__H__
 #define __USB_DEVICE__H__
 
@@ -32,74 +30,12 @@
 #include "stm32f4xx_hal.h"
 #include "usbd_def.h"
 
-/* USER CODE BEGIN INCLUDE */
+void MX_USB_Send_Report(uint8_t* data, uint32_t length);
 
-/* USER CODE END INCLUDE */
-
-/** @addtogroup USBD_OTG_DRIVER
-  * @{
-  */
-
-/** @defgroup USBD_DEVICE USBD_DEVICE
-  * @brief Device file for Usb otg low level driver.
-  * @{
-  */
-
-/** @defgroup USBD_DEVICE_Exported_Variables USBD_DEVICE_Exported_Variables
-  * @brief Public variables.
-  * @{
-  */
-
-/* Private variables ---------------------------------------------------------*/
-/* USER CODE BEGIN PV */
-
-/* USER CODE END PV */
-
-/* Private function prototypes -----------------------------------------------*/
-/* USER CODE BEGIN PFP */
-
-/* USER CODE END PFP */
-
-/*
- * -- Insert your variables declaration here --
- */
-/* USER CODE BEGIN VARIABLES */
-
-/* USER CODE END VARIABLES */
-/**
-  * @}
-  */
-
-/** @defgroup USBD_DEVICE_Exported_FunctionsPrototype USBD_DEVICE_Exported_FunctionsPrototype
-  * @brief Declaration of public functions for Usb device.
-  * @{
-  */
-
-/** USB Device initialization function. */
 void MX_USB_DEVICE_Init(void);
-
-/*
- * -- Insert functions declaration here --
- */
-/* USER CODE BEGIN FD */
-
-/* USER CODE END FD */
-/**
-  * @}
-  */
-
-/**
-  * @}
-  */
-
-/**
-  * @}
-  */
 
 #ifdef __cplusplus
 }
 #endif
 
-#endif /* __USB_DEVICE__H__ */
-
-/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+#endif
